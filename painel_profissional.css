@@ -1,0 +1,249 @@
+/* ---------- BASE ---------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+    background: #f5f7fa;
+    color: #222;
+    min-height: 100vh;
+    display: flex;
+}
+
+
+/* ---------- SIDEBAR ---------- */
+
+.sidebar {
+    width: 280px;
+    background: #0c2142;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 25px 0;
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    transition: all 0.3s ease;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.sidebar nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar nav a {
+    text-decoration: none;
+    color: #d7e4f5;
+    padding: 12px 30px;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.2s;
+    border-left: 4px solid transparent;
+}
+
+.sidebar nav a:hover,
+.sidebar nav a.active {
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 4px solid #00c0ff;
+    color: #fff;
+}
+
+
+/* ---------- MAIN CONTENT ---------- */
+
+.content {
+    margin-left: 280px;
+    padding: 40px;
+    flex: 1;
+    transition: all 0.3s ease;
+}
+
+header {
+    background: #ffffff;
+    border-radius: 10px;
+    padding: 20px 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+header h2 {
+    color: #0c2142;
+}
+
+
+/* ---------- SECTIONS ---------- */
+
+.section {
+    display: none;
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    animation: fadeIn 0.3s ease;
+}
+
+.section.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* ---------- FORMULÁRIO PERFIL ---------- */
+
+.perfil-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 40px;
+}
+
+.perfil-form label {
+    font-weight: 600;
+    color: #0c2142;
+}
+
+.perfil-form input[type="text"],
+.perfil-form input[type="file"] {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ccd6e3;
+    border-radius: 8px;
+    transition: border 0.2s ease;
+}
+
+.perfil-form input:focus {
+    border-color: #0c2142;
+    outline: none;
+}
+
+button[type="submit"] {
+    grid-column: span 2;
+    background: #0c2142;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button[type="submit"]:hover {
+    background: #0c2142;
+}
+
+
+/* ---------- FOTO ---------- */
+
+.foto-perfil {
+    grid-column: span 2;
+    text-align: center;
+}
+
+.foto-perfil img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #00c0ff;
+    margin-bottom: 10px;
+}
+
+.placeholder {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    background: #dce4f0;
+    border-radius: 50%;
+    line-height: 120px;
+    color: #7a8593;
+}
+
+
+/* ---------- TABELA SERVIÇOS ---------- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background: #0c2142;
+    color: #fff;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 10px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+tr:hover {
+    background: #f5f9ff;
+}
+
+td a {
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.success {
+    background: #d1f5e0;
+    color: #056839;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 900px) {
+    .perfil-form {
+        grid-template-columns: 1fr;
+    }
+    .sidebar {
+        position: fixed;
+        left: -280px;
+        z-index: 1000;
+    }
+    .sidebar.active {
+        left: 0;
+    }
+    .content {
+        margin-left: 0;
+    }
+    header {
+        text-align: center;
+    }
+}

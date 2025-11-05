@@ -1,0 +1,113 @@
+body {
+    background: linear-gradient(120deg, #0077ff, #00c6ff);
+    font-family: "Poppins", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.login-section {
+    background: #fff;
+    padding: 3rem 2rem;
+    border-radius: 15px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    animation: slideUp 0.6s ease forwards;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.login-section h1 {
+    color: #0077ff;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.login-section h2 {
+    color: #333;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.login-section label {
+    display: block;
+    text-align: left;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.login-section input {
+    width: 90%;
+    max-width: 400px;
+    margin-bottom: 1rem;
+    padding: 0.7rem 1rem;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.login-section input:focus {
+    border-color: #0077ff;
+    box-shadow: 0 0 5px rgba(0, 119, 255, 0.4);
+    outline: none;
+}
+
+.login-section button {
+    width: 100%;
+    padding: 0.8rem;
+    background: #0077ff;
+    color: #fff;
+    font-weight: 600;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1rem;
+}
+
+.login-section button:hover {
+    background: #005fcc;
+}
+
+.mensagem-erro {
+    background: #ffdddd;
+    color: #a33;
+    padding: 0.7rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.login-section .nota {
+    margin-top: 1.5rem;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.login-section .nota a {
+    color: #0077ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-section .nota a:hover {
+    text-decoration: underline;
+}

@@ -1,0 +1,109 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Background com escurecimento */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), /* camada escura */
+    url('image0.png') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #0077ff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: all 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: #0077ff;
+    box-shadow: 0 0 6px rgba(0, 119, 255, 0.3);
+    outline: none;
+}
+
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background: #fff;
+    color: #000;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 2px solid #0077ff;
+}
+
+button:hover {
+    background: #0077ff;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.success {
+    background: #d4edda;
+    padding: 10px;
+    border-radius: 8px;
+    color: #155724;
+    margin-top: 15px;
+}
+
+.error {
+    background: #f8d7da;
+    padding: 10px;
+    border-radius: 8px;
+    color: #721c24;
+    margin-top: 15px;
+}
+
+.clausulas {
+    font-size: 0.9rem;
+    margin-top: 20px;
+    line-height: 1.6;
+    color: #555;
+    background: #f7f9fc;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.clausulas h4 {
+    color: #0077ff;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #0077ff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

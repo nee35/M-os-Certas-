@@ -1,0 +1,240 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f3f5f9;
+    margin: 0;
+    color: #0d1b2a;
+}
+
+header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 2px solid #0077ff20;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 60px;
+    box-shadow: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0.5rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo img {
+    height: 55px;
+    width: auto;
+    filter: drop-shadow(0 0 5px rgba(0, 119, 255, 0.25));
+}
+
+
+/* === NAV === */
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: 0.3s;
+    position: relative;
+}
+
+nav a:hover,
+nav a.active {
+    color: #0077ff;
+    text-shadow: 0 0 8px rgba(0, 119, 255, 0.4);
+}
+
+.detalhes-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.detalhes-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #0077ff20;
+    margin-bottom: 20px;
+}
+
+.detalhes-header h1 {
+    color: #0077ff;
+    margin: 0;
+}
+
+.categoria {
+    background: #0077ff;
+    color: #fff;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.detalhes-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+
+/* === GALERIA === */
+
+.galeria-detalhes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.galeria-detalhes img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.galeria-detalhes img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(0, 119, 255, 0.4);
+}
+
+
+/* === MODAL === */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.2);
+}
+
+.fechar {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #fff;
+    font-size: 35px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.fechar:hover {
+    color: #0077ff;
+}
+
+
+/* === INFO BLOCO === */
+
+.info-bloco h2,
+.info-bloco h3 {
+    color: #0077ff;
+    margin-top: 15px;
+}
+
+.info-bloco p {
+    color: #333;
+    line-height: 1.6;
+}
+
+#map {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    margin: 10px 0 20px;
+    border: 2px solid #0077ff30;
+}
+
+
+/* === BOTÃO === */
+
+.btn-contactar {
+    background: linear-gradient(135deg, #0077ff, #5db8ff);
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn-contactar:hover {
+    background: linear-gradient(135deg, #0062d9, #4caeff);
+    box-shadow: 0 0 15px rgba(0, 119, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+
+/* === BOTÃO DE CONTACTO === */
+
+.bloco-contato {
+    margin-top: 25px;
+}
+
+.btn-contactar {
+    background: linear-gradient(135deg, #0077ff, #5db8ff);
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+    box-shadow: 0 0 12px rgba(0, 119, 255, 0.3);
+}
+
+.btn-contactar:hover {
+    background: linear-gradient(135deg, #0062d9, #4caeff);
+    box-shadow: 0 0 18px rgba(0, 119, 255, 0.5);
+    transform: translateY(-2px);
+}
+
+.aviso-contato {
+    margin-top: 20px;
+    padding: 12px;
+    background: #ffefef;
+    border-left: 5px solid #ff5a5a;
+    color: #b20000;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+
+/* === RESPONSIVO === */
+
+@media (max-width: 900px) {
+    .detalhes-content {
+        grid-template-columns: 1fr;
+    }
+    .galeria-detalhes img {
+        height: 200px;
+    }
+}
